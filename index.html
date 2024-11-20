@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberSecure - Cybersecurity Solutions</title>
+    <title>CyberSecure - Modern Cybersecurity Solutions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #0e0e10;
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: 'Poppins', sans-serif;
+            background-color: #0d1117;
+            color: #e5e5e5;
         }
 
         header {
-            background: #1f1f24;
+            background: #161b22;
             padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         header h1 {
@@ -40,7 +43,7 @@
 
         nav ul li a {
             text-decoration: none;
-            color: #ffffff;
+            color: #e5e5e5;
             font-size: 1rem;
             transition: color 0.3s ease;
         }
@@ -51,20 +54,38 @@
 
         .hero {
             text-align: center;
-            padding: 5rem 2rem;
-            background: url('https://source.unsplash.com/1600x900/?cybersecurity,technology') no-repeat center center/cover;
+            padding: 6rem 2rem;
+            background: linear-gradient(135deg, #1f2937, #0d1117);
             color: #ffffff;
         }
 
         .hero h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: 600;
             margin-bottom: 1rem;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .hero p {
             font-size: 1.2rem;
             max-width: 600px;
             margin: 0 auto;
+        }
+
+        .button {
+            margin-top: 2rem;
+            display: inline-block;
+            background-color: #4CAF50;
+            color: #ffffff;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #45a049;
         }
 
         .sections {
@@ -75,11 +96,16 @@
         }
 
         .section {
-            background: #1f1f24;
+            background: #161b22;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
         }
 
         .section h3 {
@@ -87,16 +113,18 @@
             margin-bottom: 1rem;
         }
 
-        .section p {
-            font-size: 1rem;
-        }
-
         footer {
             text-align: center;
-            padding: 1rem 2rem;
-            background: #1f1f24;
+            padding: 1.5rem 2rem;
+            background: #161b22;
             color: #888888;
             font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -113,21 +141,22 @@
         </nav>
     </header>
     <div class="hero">
-        <h2>Protecting Your Digital World</h2>
-        <p>Leading solutions in cybersecurity education, services, and consultations. Stay safe in the digital age.</p>
+        <h2>Protect Your Digital Life</h2>
+        <p>Experience next-generation cybersecurity solutions tailored for individuals and businesses. Stay ahead of threats with CyberSecure.</p>
+        <a href="#services" class="button">Learn More</a>
     </div>
     <main class="sections">
         <div class="section" id="services">
             <h3>Our Services</h3>
-            <p>We offer vulnerability assessments, penetration testing, and secure application development.</p>
+            <p>Advanced penetration testing, vulnerability assessments, and secure application development.</p>
         </div>
         <div class="section" id="consulting">
             <h3>Consulting</h3>
-            <p>Expert advice tailored to your business needs, ensuring robust cybersecurity strategies.</p>
+            <p>Customized cybersecurity consulting for robust protection and compliance.</p>
         </div>
         <div class="section" id="education">
             <h3>Education</h3>
-            <p>Stay informed with our resources, tutorials, and tips to enhance your cybersecurity knowledge.</p>
+            <p>Resources, tutorials, and guides to enhance your cybersecurity knowledge.</p>
         </div>
     </main>
     <footer id="contact">
